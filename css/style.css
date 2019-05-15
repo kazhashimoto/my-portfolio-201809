@@ -1,0 +1,745 @@
+@charset "utf-8";
+/* CSS Document */
+/**{
+	outline: solid 1px red;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+body{
+	font-size: 16px;
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.87);
+	
+	/*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;*/
+	
+	font-family: -apple-system,'Lato',Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+}
+
+/* Google Fontsを除いた指定 */
+.ft-less{
+	font-family: -apple-system,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif;
+}
+
+h1, h2, h3{
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+
+h4{
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+th{
+	font-weight: normal;
+}
+
+img{
+	vertical-align: bottom;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;			/* 親要素の色指定を継承 */
+}
+
+/* 共通部品のスタイル設定 */
+/* 文字サイズ */
+.txt-small{	/* 小さいテキスト */
+	font-size: 12px;
+}
+
+.txt-red{
+	color: red;
+}
+
+.en-spc{ /* 英語表記の文字列で単語間のスペースを調整する */
+	word-spacing: 0.2em;
+}
+
+/* 見出し */
+.hd-large{ /* サイズ大、下線なし */
+	font-size: 30px;
+}
+
+.hd-m-u{	/* サイズ中、下線あり */
+	font-size: 20px;
+	padding-bottom: 5px;
+	border-bottom: solid 1px #ccc;
+	border-left: solid 20px #FF5722;	/* c-primary*/
+	padding-left: 15px;
+}
+
+.hd-s-u{ /* サイズ小、下線あり */
+	font-size: 16px;
+	padding-bottom: 2px;
+	border-bottom: solid 1px #ccc;
+	border-left: solid 16px #FF5722;	/* c-primary */
+	padding-left: 12px;
+}
+
+.hd-s{ /* サイズ小、下線なし */
+	font-size: 16px;
+	border-left: solid 16px #FF5722;	/* c-primary */
+	padding-left: 12px;
+}
+
+.hd-s-b{ /* サイズ小、太字 */
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* リンクの色 */
+.txt-link{
+	color: #3F51B5;		/* c-accent */
+}
+
+a.txt-link:hover{
+	color: #FF5722;		/* c-primary */
+}
+
+/* ボタン(大) */
+.btn-large{
+	width: 150px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #4EA1D5;
+	color: white;
+	font-weight: bold;
+}
+
+.btn-large:hover{
+	opacity: 0.7;
+}
+
+.btn-large:active{
+	background-color: #333;
+}
+
+/* ボタン(小) 白*/
+.btn-small{
+	padding: 5px 10px;
+	border: solid 1px #ccc;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.btn-small:hover{
+	opacity: 0.7;
+}
+
+.btn-small:active{
+	background-color: #333;
+	color: white;
+}
+
+/* ボタンのリスト(横に並べるだけ) */
+.btn-list{
+	margin-bottom: 20px;
+}
+
+.btn-list li{
+	display: inline-block;
+}
+
+.lm-s{	/* 左側にマージン(小) */
+	margin-left: 20px;
+}
+
+/* テキスト主体のセクション */
+.sxn{
+	margin-bottom: 40px;
+}
+
+.align-r{ /* ブロック内のテキストを右寄せ */
+	text-align: right;
+}
+
+/* 後続のブロックとの間に大きめの空白をとるための詰め物 */
+.fill-blank{
+	margin-bottom: 100px;
+}
+
+/* 本体コンテンツのサイズ設定 */
+/* 960 grid system */
+.container{
+	width: 940px;		/* 16 columns */
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+/* ヘッダの設定 */
+#header-area-fixed{
+	position: fixed;	/* ヘッダーの固定 */
+    top: 0px;			/* 位置(上0px) */
+    left: 0px;			/* 位置(右0px) */
+    width: 100%;		/* 横幅100%  (position: fixedの場合、横幅100%にするにこれが必要 */
+	border-bottom: solid 1px #ccc;
+	z-index: 99999;		/* jquery.bxsliderを使っている場合、スライドがヘッダの上に重なるのを防ぐ */
+}
+
+#header-top{
+	padding: 10px;
+	font-size: 12px;
+}
+
+header.hide{
+	display: none;
+}
+
+#header-top.hide{
+	display: none;
+}
+
+#myaccount{
+	width: 220px;	/* 4 columns */
+	margin-left: auto;
+	
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+}
+
+#myaccount a{
+	text-decoration: underline;
+}
+
+#myaccount a:hover{
+	color: #ccc;
+}
+
+/* ロゴ */
+.logo{
+	height: 100px;
+	width: auto;	/* 幅は縦横比を維持して自動計算する。HTML imgタグに記述したサイズを上書き */
+}
+
+#site-header{
+	overflow: hidden;
+}
+
+#shop-logo{
+	width: 220px;
+	float: left;
+}
+
+#shop-heading{
+	width: 640px;
+	padding-top: 30px;
+	float: left;
+}
+
+.shop-title{
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 15px;
+	margin-bottom: 0;
+}
+
+/* グローバルナビゲーションの設定 */
+#gnav{
+	padding: 5px;
+}
+
+#gnav-menu{
+	width: 520px;		/* 9 columns */
+	font-size: 14px;
+    display: flex;	/*直下の要素を並列にレイアウトする */
+	justify-content: space-between;	/* 横方向の揃え位置で、アイテムの間にスペースを均等に割り付け*/
+	margin-left: auto;	/* 右寄せ */
+	
+	position: relative;		/* サブメニューの三角形を付ける場合の基準点 */
+}
+
+/* サブメニューがある項目には後ろに三角形を付ける */
+.sub-menu:after{
+	width: 0;
+	height: 0;
+	content: "";
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+	border-top: solid 8.7px white;			/* 高さ=left-width * sqrt(3) */
+	
+	position: absolute;
+	top: 2px;
+	right: -15px;			/* liの右端から少し外側 */
+}
+
+/* サブメニューの設定*/
+#gnav-menu li{
+	position: relative;     /* サブメニュー表示の基準位置にする */
+	border: solid 2px transparent;	/* 下線を引く分の幅を確保するためち透明の線を引いておく */
+}
+
+#gnav-menu a:hover{
+	color: #757575;		/* color-dark */
+	font-weight: bold;
+}
+#gnav-menu ul{
+	display: none;	/* 標準では非表示にする */
+	position: absolute;  /* 絶対配置にする */
+	border: solid 1px #ccc;
+	padding: 0 10px 10px 10px;
+}
+
+#gnav-menu ul li{
+	padding-top: 10px;
+	white-space: nowrap;	/* サブメニュー項目の文字列が折り返さないようにする*/
+}
+
+#gnav-menu li:hover{
+	border-bottom: solid 2px #757575;		/* color-dark */
+}
+
+#gnav-menu li:hover ul{
+	display: block;      /*マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+
+/* コンテントの設定 */
+#content{
+	/* 固定ヘッダ対応 */
+	padding-top: 180px;			/* ヘッダ固定領域分の高さを（かぶらないように）あける。*/
+}
+
+/* スライダーの設定 */
+#slider{
+	margin-bottom: 20px;
+}
+
+/* お知らせの設定 */
+#news{
+	margin-bottom: 80px;
+}
+
+#headline{
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.date{
+	width: 60px;
+	line-height: 1.7;
+	float: left;
+}
+
+.headline-text{
+	line-height: 1.7;
+	width: 860px;
+	margin-left: 20px;
+	float: left;
+}
+
+/* 商品一覧のページ */
+/* トップページのタイル状レイアウト **/
+.parts-list-tiled{
+	overflow: hidden;
+	margin-bottom: 80px;
+}
+.heading{
+	width: 220px;
+	margin-right: 20px;
+	float: left;
+}
+
+
+
+.parts-list-tiled ul{
+	width: 700px;
+	overflow: hidden;
+	float: left;
+}
+
+.parts-list-tiled li:hover{
+	opacity: 0.5;
+}
+
+.parts-list-tiled ul li:nth-child(3n){
+	margin-right: 0;
+}
+
+.tile{
+	width: 220px;	/* 4 columns */
+	margin-right: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.tile-large{
+	width: 460px;
+	margin-right: 0;
+	float: right;
+}
+
+/*  商品リストページのレイアウト */
+.parts-list h2{
+	margin-bottom: 10px;
+}
+
+.parts-list ul{
+	overflow: hidden;
+}
+
+.parts-list ul li:nth-child(4n){
+	margin-right: 0;
+}
+
+.parts{
+	width: 220px;	/* 4 columns */
+	margin-right: 20px;
+	margin-bottom: 50px;
+	float: left;
+}
+
+.parts img{
+	margin-bottom: 10px;
+}
+
+.parts p{
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* デバッグ用: 商品一覧で商品番号も表示したいときは、コメントアウトする。*/
+.pcode{
+	display: none;
+}
+
+.pcode:after{ /* 商品番号の後ろにスペースをつける */
+	content: " ";
+}
+
+/* リストのフィルター用*/
+.prod-attr{
+	display: none;
+}
+
+
+#banner{
+	margin-bottom: 80px;
+}
+#banner ul{
+	overflow: hidden;
+}
+
+#banner li{
+	width: 460px;	/* 6 columns */
+	margin-right: 20px;
+	float: left;
+	
+	position: relative;	/* バナーテキストの配置用 */
+}
+
+#banner li:last-child{
+	margin-right: 0;
+}
+
+#banner li div{		/* バナーテキストの配置用 */
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+.bnr-txt1-w{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	color: white;
+	text-shadow: 2px 2px #ccc;
+}
+
+.bnr-txt1-r{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	color: lightcoral;
+	text-shadow: 2px 2px #fff;
+}
+
+.bnr-txt2-w{
+	font-size: 16px;
+	font-weight: normal;
+	color: white;
+}
+
+.bnr-txt2-r{
+	font-size: 16px;
+	font-weight: normal;
+	color: lightcoral;
+}
+
+/* ログインフォームの設定 */
+#login{
+	margin-bottom: 100px;
+	border-bottom: solid 1px #ccc;
+	overflow: hidden;
+}
+
+#login a{
+	text-decoration: underline;
+}
+
+#sign-up-desc{
+	width: 460px;
+	margin-right: 20px;
+	float: left;
+}
+
+#sign-up-desc p{
+	line-height: 1.7;
+	margin-bottom: 20px;
+}
+
+#sign-up-box{
+	width: 460px;	/* 8 columns */
+	float: left;
+}
+
+.sign-up.top{
+	margin-bottom: 50px;
+}
+
+.sign-up form{
+	margin-bottom: 20px;
+}
+
+.form-parts{
+	overflow: hidden;
+}
+
+.form-parts dt{
+	width: 120px;
+	text-align: right;
+	padding-right: 10px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.form-parts dd{
+	width: 330px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.form-parts input{
+	border: solid 1px #666;
+	border-radius: 5px;
+}
+
+
+.sign-up .buttons{
+	margin-left: 130px;
+}
+
+.sign-up input{
+	width: 150px;
+}
+
+.sign-up p{
+	line-height: 1.7;
+}
+
+/* サブフッターの設定*/
+#sub-footer-area{
+}
+
+#sub-footer-content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 12px;
+	line-height: 2;
+	overflow: hidden;
+}
+
+.footer-nav{
+	width: 220px;	/* 4 columns */
+	margin-right: 20px;
+	float: left;
+}
+
+.footer-nav a:hover{
+	color: #ccc;
+}
+
+#other-info{
+	width: 460px;	/* 8 columns */
+	height: 100px;
+	float: left;
+}
+
+#footer-area{
+}
+
+#site-footer{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+
+/* 商品一覧ページ */
+
+
+
+
+/* 商品詳細ページ */
+/* パンくずリスト */
+.breadcrumb{
+	font-size: 14px;
+	margin-bottom: 40px;
+}
+
+.breadcrumb a{
+	text-decoration: underline;
+}
+
+#product-info{
+	margin-bottom: 100px;
+	overflow: hidden;
+}
+
+#product-view{
+	width: 460px;
+	float: left;
+}
+
+/* slickの設定 */
+.slider-for{
+	margin-bottom: 20px;
+}
+
+/* slickの左右 arrowボタンがslickのdivの外側に白で描かれており見えないため、
+さらにdivで囲んでpaddingをつけ、arrowの色を変える*/
+.slider-nav-box{
+	padding: 0 30px;
+}
+
+.slider-nav img{
+	width: 100px;
+	height: auto;
+}
+
+/* arrowの色を変える */
+.slick-prev:before,
+.slick-next:before{
+    color: #ccc;
+}
+
+#product-spec{
+	width: 340px;
+	float: right;
+}
+
+.product-price{
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.description{
+	padding: 20px 0;
+}
+
+#spec-table{
+	width: 340px;
+	border: solid 1px #ccc;
+	border-collapse: collapse;
+}
+
+#spec-table th{
+	width: 50px;
+}
+
+#spec-table th,
+#spec-table td{
+	padding: 5px 10px;
+	border: solid 1px #ccc;
+}
+
+/* お問い合わせページの設定 */
+.inquiry th{
+	width: 160px;
+	padding: 5px 0;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+.inquiry td{
+	padding: 5px 0 5px 20px;
+}
+
+.inquiry input{
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+.inquiry textarea{
+	width: 520px;
+	height: 300px;
+	resize: vertical;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+.required:after{
+	content: "*";
+	color: red;
+}
+
+.annotation{
+	font-size: 12px;
+	padding: 20px 0;
+}
+
+.indent-block{
+	margin-left: 180px;	/* 3columns + margin 20px */
+}
+
+/* 会社概要のページ */
+.mytable{
+	width: 700px;
+	border: solid 1px #ccc;
+	border-collapse: collapse;
+	font-size: 14px;
+	line-height: 1.7;
+}
+
+.mytable th{
+	width: 160px;
+	text-align: right;
+	border: solid 1px #ccc;
+	padding: 10px;
+	
+}
+.mytable td{
+	border: solid 1px #ccc;
+	padding: 10px;
+}
+
+/* プライバシーポリシーのページ */
+.body-text{
+	width: 700px;
+	line-height: 1.7;
+	text-align: justify;	/* 両端揃え(均等割り付け) */
+	text-justify: distribute; /* 単語の区切り（スペース）と文字の間隔を広げる。日本語の文章の均等割付に適している。*/
+}
+
+.body-text p{
+	margin-bottom: 10px;
+}
+
+.list-item dt{
+	font-weight: bold;
+}
+
+.list-item dd{
+	display: list-item;
+	margin-left: 2em;
+}
+
+/* 店舗へのアクセスのページ */
+#address{
+	padding: 30px 0;
+}

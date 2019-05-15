@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>f・bloom | 店舗へのアクセス</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/style-color.css" rel="stylesheet" media="all">
+<script src="js/jquery-2.2.4.min.js"></script>
+
+<script>
+	function init() {
+		// スクロールして何ピクセルでアニメーションさせるか
+		var px_change   = 100;	// ヘッダを変化させるポイント
+		var bg_change	= 50;	// 背景色を変化させるポイント
+
+		// スクロールのイベントハンドラを登録
+		window.addEventListener('scroll', function(e){
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > bg_change ) {
+			$("#site-header-area").addClass("c-primary-t");
+			$("#gnav-area").addClass("c-primary-t");
+		
+		// 変化するポイント以前であればクラスを削除
+		} else if ($("#site-header-area").hasClass("c-primary-t")) {
+			$("#site-header-area").removeClass("c-primary-t");
+			$("#gnav-area").removeClass("c-primary-t");
+
+		}
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > px_change ) {
+			$("header").addClass("hide");
+			$("#header-top").addClass("hide");
+
+		// 変化するポイント以前であればクラスを削除
+		} else if ( $("header").hasClass("hide") ) {
+			$("header").removeClass("hide");
+			$("#header-top").removeClass("hide");
+			
+		}
+		});
+	}
+	window.onload = init();
+</script>
+</head>
+
+<body>
+<div id="header-area-fixed">
+	<div id="header-top" class="c-dark">
+		<div id="header-top-content" class="container">
+			<ul id="myaccount">
+				<li><a href="index.html#login">マイアカウント</a></li>
+				<li><a href="index.html#login">ログイン</a></li>
+				<li>|</li>
+				<li><a href="index.html#login">会員登録</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="site-header-area" class="c-primary">
+	<header id="site-header" class="container">
+		<div id="shop-logo">
+			<a href="index.html"><img class="logo" src="images/logo_v06.png" width="220" height="100" alt="logo"></a>
+		</div>
+		<div id="shop-heading">
+			<p class="txt-small">プリザーブドフラワー専門店</p>
+			<h1 class="shop-title">エフ・ブルーム</h1>
+		</div>
+	</header>
+	</div>
+	<div id="gnav-area" class="c-primary">
+		<nav id="gnav" class="container">
+			<ul id="gnav-menu">
+				<li><a href="index.html">ホーム</a></li>
+				<li class="sub-menu"><a href="product-list.html">カテゴリ</a>
+					<ul class="c-base">
+						<li><a href="product-list.html">すべての商品を見る</a></li>
+						<li><a href="product-list.html">ウエディング</a></li>
+						<li><a href="product-list.html">テーブルフラワー</a></li>
+						<li><a href="product-list.html">フレーム</a></li>
+						<li><a href="product-list.html">リース</a></li>
+					</ul>
+				</li>
+				<li class="sub-menu"><a href="about.html">はじめての方へ</a>
+					<ul class="c-base">
+						<li><a href="about.html">プリザーブドフラワーとは</a></li>
+					</ul>
+				</li>
+				<li><a href="location.html">店舗へのアクセス</a></li>
+			</ul>
+		</nav>
+	</div><!--gnav-area-->
+</div><!--header-area-fixed-->
+
+<div id="content" class="container">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7615363133173!2d139.71272336526025!3d35.732082780182466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d66f7b32a77%3A0x20791a8c0166f942!2z44CSMTcwLTAwMTMg5p2x5Lqs6YO96LGK5bO25Yy65p2x5rGg6KKL77yR5LiB55uu77yR77yX!5e0!3m2!1sja!2sjp!4v1538455995458" width="640" height="640" frameborder="0" style="border:0" allowfullscreen></iframe>
+	
+	<div id="address">
+		<p>〒170-0013<br>東京都豊島区東池袋1丁目17　1階<br>TEL: 03-3xxx-0000 / FAX: 03-3xxx-0000</p>
+	</div>
+	<div id="access">
+		<h2 class="hd-m-u">アクセス</h2>
+		<ul>
+			<li>JR：「池袋駅」東口より徒歩7分</li>
+		</ul>
+	</div>
+</div><!--content-->
+	<div class="fill-blank"></div>
+
+<div id="sub-footer-area" class="c-primary">
+	<div id="sub-footer-content" class="container">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="contact-us.html">お問い合わせ</a></li>
+				<li><a href="#">お電話でのご注文</a></li>
+				<li><a href="#">マイアカウント登録・削除</a></li>
+				<li><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="info.html">会社概要</a></li>
+				<li><a href="policy.html">プライバシーポリシー</a></li>
+				<li><a href="#">スタッフ募集</a></li>
+				<li><a href="#">特定商取引法に基づく表記</a></li>
+				
+			</ul>
+		</nav>
+		<div id="other-info">
+			<p></p>
+		</div>
+	</div>
+</div>
+<div id="footer-area" class="c-dark">
+	<footer id="site-footer" class="container">
+		<p class="en-spc">Copyright &copy; 2018 F Co.,Ltd. All rights reserved.</p>
+	</footer>
+</div>
+	
+</body>
+</html>

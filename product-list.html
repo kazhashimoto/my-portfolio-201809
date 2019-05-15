@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>f・bloom | 商品カテゴリ01</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/style-color.css" rel="stylesheet" media="all">
+
+<link href="css/themes/image.css" rel="stylesheet" media="all"><!--scrollUp-->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/list.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+
+<script>
+	function init() {
+		// スクロールして何ピクセルでアニメーションさせるか
+		var px_change   = 100;	// ヘッダを変化させるポイント
+		var bg_change	= 50;	// 背景色を変化させるポイント
+
+		// スクロールのイベントハンドラを登録
+		window.addEventListener('scroll', function(e){
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > bg_change ) {
+			$("#site-header-area").addClass("c-primary-t");
+			$("#gnav-area").addClass("c-primary-t");
+		
+		// 変化するポイント以前であればクラスを削除
+		} else if ($("#site-header-area").hasClass("c-primary-t")) {
+			$("#site-header-area").removeClass("c-primary-t");
+			$("#gnav-area").removeClass("c-primary-t");
+
+		}
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > px_change ) {
+			$("header").addClass("hide");
+			$("#header-top").addClass("hide");
+
+		// 変化するポイント以前であればクラスを削除
+		} else if ( $("header").hasClass("hide") ) {
+			$("header").removeClass("hide");
+			$("#header-top").removeClass("hide");
+			
+		}
+		});
+	}
+	window.onload = init();
+</script>
+<script>
+	$(function(){
+		$.scrollUp({scrollImg: true});
+	});
+</script>
+
+</head>
+
+<body>
+<div id="header-area-fixed">
+	<div id="header-top" class="c-dark">
+		<div id="header-top-content" class="container">
+			<ul id="myaccount">
+				<li><a href="index.html#login">マイアカウント</a></li>
+				<li><a href="index.html#login">ログイン</a></li>
+				<li>|</li>
+				<li><a href="index.html#login">会員登録</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="site-header-area" class="c-primary">
+	<header id="site-header" class="container">
+		<div id="shop-logo">
+			<a href="index.html"><img class="logo" src="images/logo_v06.png" width="220" height="100" alt="logo"></a>
+		</div>
+		<div id="shop-heading">
+			<p class="txt-small">プリザーブドフラワー専門店</p>
+			<h1 class="shop-title">エフ・ブルーム</h1>
+		</div>
+	</header>
+	</div>
+	<div id="gnav-area" class="c-primary">
+		<nav id="gnav" class="container">
+			<ul id="gnav-menu">
+				<li><a href="index.html">ホーム</a></li>
+				<li class="sub-menu"><a href="product-list.html">カテゴリ</a>
+					<ul class="c-base">
+						<li><a href="product-list.html">すべての商品を見る</a></li>
+						<li><a href="product-list.html">ウエディング</a></li>
+						<li><a href="product-list.html">テーブルフラワー</a></li>
+						<li><a href="product-list.html">フレーム</a></li>
+						<li><a href="product-list.html">リース</a></li>
+					</ul>
+				</li>
+				<li class="sub-menu"><a href="about.html">はじめての方へ</a>
+					<ul class="c-base">
+						<li><a href="about.html">プリザーブドフラワーとは</a></li>
+					</ul>
+				</li>
+				<li><a href="location.html">店舗へのアクセス</a></li>
+			</ul>
+		</nav>
+	</div><!--gnav-area-->
+</div><!--header-area-fixed-->
+
+<main id="content" class="container">
+		<h2 class="hd-m-u">商品一覧</h2>
+		<div id="users" class="parts-list">
+			<ul class="btn-list">
+				<li><span class="txt-small">絞込み: </span></li>
+				<li><button class="btn-small filter-category">Wedding</button></li>
+				<li><button class="btn-small filter-category">Table flower</button></li>
+				<li><button class="btn-small filter-category">Frame</button></li>
+				<li><button class="btn-small filter-category">Wreath</button></li>
+				<li><button class="btn-small filter-category">Other</button></li>
+				<li class="lm-s"><span class="txt-small">並べ替え: </span></li>
+				<li><button class="btn-small sort" data-sort="price" data-order="desc">価格の高い順 </button></li>
+				<li><button class="btn-small sort" data-sort="price" data-order="asc">価格の安い順</button></li>
+			</ul>
+			<ul class="list">
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a001-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A001</span>ワインローズ<br>5,000円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">5000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-a002.html"><img src="images/a002-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A002</span>ナチュラルガーデン<br>4,700円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">4700</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-a003.html"><img src="images/a003-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A003</span>アメジスト<br>6,500円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">6500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a004-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A004</span>グリーントピアリー<br>2,500円</p>
+					<div class="prod-attr"><span class="category">Other</span><span class="price">2500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a005-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A005</span>ラウンドブーケ<br>35,000円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">35000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-a006.html"><img src="images/a006-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A006</span>凛<br>3,200円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">3200</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a007-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A007</span>アンブリッジ<br>10,000円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">10000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a008-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A008</span>フレームアレンジ<br>5,500円</p>
+					<div class="prod-attr"><span class="category">Frame</span><span class="price">5500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a009-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A009</span>フレームアレンジ<br>4,000円</p>
+					<div class="prod-attr"><span class="category">Frame</span><span class="price">4000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a010-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A010</span>キューブボックス S<br>2,500円</p>
+					<div class="prod-attr"><span class="category">Frame</span><span class="price">2500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a011-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A011</span>リングピロー<br>3,500円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">3500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a012-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A012</span>グリーンリース<br>3,800円</p>
+					<div class="prod-attr"><span class="category">Wreath</span><span class="price">3800</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a013-220x220.jpg" width="220" height="220" alt=""></a>
+					<p>A013 ガーデンリース<br>3,500円</p>
+					<div class="prod-attr"><span class="category">Wreath</span><span class="price">3500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a014-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A014</span>フリルバッグ<br>10,000円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">10000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a015-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A015</span>ミニリース<br>2,600円</p>
+					<div class="prod-attr"><span class="category">Wreath</span><span class="price">2600</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a016-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A016</span>グリーンボール<br>360円</p>
+					<div class="prod-attr"><span class="category">Other</span><span class="price">360</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a017-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A017</span>ガーネット<br>3,500円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">3500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a018-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A018</span>パールホワイト<br>15,000円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">15000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a019-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A019</span>グリーンボール<br>360円</p>
+					<div class="prod-attr"><span class="category">Other</span><span class="price">360</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a020-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A020</span>リビングピロー<br>3,500円</p>
+					<div class="prod-attr"><span class="category">Table flower</span><span class="price">3500</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a021-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A021</span>ラウンドブーケ<br>20,000円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">20000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-axxx.html"><img src="images/a022-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A022</span>サムシングブルー<br>30,000円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">30000</span></div>
+				</li>
+				<li class="parts">
+					<a href="product-a023.html"><img src="images/a023-220x220.jpg" width="220" height="220" alt=""></a>
+					<p><span class="pcode">A023</span>アンティークローズ<br>45,000円</p>
+					<div class="prod-attr"><span class="category">Wedding</span><span class="price">45000</span></div>
+				</li>
+			</ul>
+		</div><!--parts-list-->
+</main><!--content-->
+
+<div class="fill-blank"></div>
+
+<div id="sub-footer-area" class="c-primary">
+	<div id="sub-footer-content" class="container">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="contact-us.html">お問い合わせ</a></li>
+				<li><a href="#">お電話でのご注文</a></li>
+				<li><a href="#">マイアカウント登録・削除</a></li>
+				<li><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="info.html">会社概要</a></li>
+				<li><a href="policy.html">プライバシーポリシー</a></li>
+				<li><a href="#">スタッフ募集</a></li>
+				<li><a href="#">特定商取引法に基づく表記</a></li>
+				
+			</ul>
+		</nav>
+		<div id="other-info">
+			<p></p>
+		</div>
+	</div>
+</div>
+<div id="footer-area" class="c-dark">
+	<footer id="site-footer" class="container">
+		<p class="en-spc">Copyright &copy; 2018 F Co.,Ltd. All rights reserved.</p>
+	</footer>
+</div>
+
+<script>
+	var options = {
+		valueNames: [ 'category', 'price' ]
+	};
+
+	var partsList = new List('users', options);
+	
+	$('.filter-category').on('click',function(){
+		var $text = $(this).text();
+		if($(this).hasClass( 'selected' )){
+			partsList.filter();
+			$(this).removeClass('selected');
+		} else {
+			partsList.filter(function(item) {
+				return (item.values().category == $text);
+			});
+		$(this).addClass('selected');
+	}
+	});
+</script>
+
+</body>
+</html>

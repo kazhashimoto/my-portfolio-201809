@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>f・bloom | プライバシーポリシー</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet" media="all">
+<link href="css/style-sticky-footer.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/style-color.css" rel="stylesheet" media="all">
+<script src="js/jquery-2.2.4.min.js"></script>
+
+<script>
+	function init() {
+		// スクロールして何ピクセルでアニメーションさせるか
+		var px_change   = 100;	// ヘッダを変化させるポイント
+		var bg_change	= 50;	// 背景色を変化させるポイント
+
+		// スクロールのイベントハンドラを登録
+		window.addEventListener('scroll', function(e){
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > bg_change ) {
+			$("#site-header-area").addClass("c-primary-t");
+			$("#gnav-area").addClass("c-primary-t");
+		
+		// 変化するポイント以前であればクラスを削除
+		} else if ($("#site-header-area").hasClass("c-primary-t")) {
+			$("#site-header-area").removeClass("c-primary-t");
+			$("#gnav-area").removeClass("c-primary-t");
+
+		}
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > px_change ) {
+			$("header").addClass("hide");
+			$("#header-top").addClass("hide");
+
+		// 変化するポイント以前であればクラスを削除
+		} else if ( $("header").hasClass("hide") ) {
+			$("header").removeClass("hide");
+			$("#header-top").removeClass("hide");
+			
+		}
+		});
+	}
+	window.onload = init();
+</script>
+</head>
+
+<body>
+<div id="wrapper"><!--for sticky footer-->
+
+<div id="header-area-fixed">
+	<div id="header-top" class="c-dark">
+		<div id="header-top-content" class="container">
+			<ul id="myaccount">
+				<li><a href="index.html#login">マイアカウント</a></li>
+				<li><a href="index.html#login">ログイン</a></li>
+				<li>|</li>
+				<li><a href="index.html#login">会員登録</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="site-header-area" class="c-primary">
+	<header id="site-header" class="container">
+		<div id="shop-logo">
+			<a href="index.html"><img class="logo" src="images/logo_v06.png" width="220" height="100" alt="logo"></a>
+		</div>
+		<div id="shop-heading">
+			<p class="txt-small">プリザーブドフラワー専門店</p>
+			<h1 class="shop-title">エフ・ブルーム</h1>
+		</div>
+	</header>
+	</div>
+	<div id="gnav-area" class="c-primary">
+		<nav id="gnav" class="container">
+			<ul id="gnav-menu">
+				<li><a href="index.html">ホーム</a></li>
+				<li class="sub-menu"><a href="product-list.html">カテゴリ</a>
+					<ul class="c-base">
+						<li><a href="product-list.html">すべての商品を見る</a></li>
+						<li><a href="product-list.html">ウエディング</a></li>
+						<li><a href="product-list.html">テーブルフラワー</a></li>
+						<li><a href="product-list.html">フレーム</a></li>
+						<li><a href="product-list.html">リース</a></li>
+					</ul>
+				</li>
+				<li class="sub-menu"><a href="about.html">はじめての方へ</a>
+					<ul class="c-base">
+						<li><a href="about.html">プリザーブドフラワーとは</a></li>
+					</ul>
+				</li>
+				<li><a href="location.html">店舗へのアクセス</a></li>
+			</ul>
+		</nav>
+	</div><!--gnav-area-->
+</div><!--header-area-fixed-->
+
+<div id="content" class="container">
+<main class="body-text ft-less">
+	<h2 class="hd-m-u">株式会社エフ　プライバシーポリシー</h2>
+	<h3 class="hd-s-u">個人情報の利用について</h3>
+	<section class="sxn">
+		<h4 class="hd-s-b">a) 個人情報の収集と利用目的及び範囲について</h4>
+		<p>当社は、サービスをご利用の皆様により良いサービスを提供するため、皆様に関する個人情報を業務上必要な範囲で、かつ、適法で公正な手段により収集させていただきます｡</p>
+
+		<p>当社は、お客様からご提供いただいた個人情報を、ネット販売事業に必要な範囲内で利用し、その他の目的に利用することはありません。</p>
+
+		<p>上記の利用目的を変更する場合には、その内容をご本人に対し、原則として書面等により通知し、事前に皆様の同意の下に行います。</p>
+	</section>
+	<section class="sxn">
+		<h4 class="hd-s-b">b) 個人情報の第三者への提供について</h4>
+			<p>個人情報は、皆様の同意を得ずに第三者に提供することはありません。ただし、以下の正当な理由が生じる場合は例外とします。</p>
+
+		<dl class="list-item">
+			<dt>法令に基づく場合</dt>
+			<dd>人の生命、身体または財産の保護に必要な場合で、皆様の同意を得ることが困難なとき</dd>
+			<dd>公衆衛生・児童の健全育成に特に必要な場合で、皆様の同意を得ることが困難なとき</dd>
+			<dd>国の機関などが法令の定める事務を遂行することに対して協力する必要がある場合で、皆様の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき</dd>
+			</dl>
+	</section>
+	<address class="align-r">
+		<p>平成27年12月1日現在<br>株式会社　エフ</p>
+	</address>
+	</main>
+</div><!--content-->
+	<div class="fill-blank"></div>
+
+<div class="sticky-footer">
+<div id="sub-footer-area" class="c-primary">
+	<div id="sub-footer-content" class="container">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="contact-us.html">お問い合わせ</a></li>
+				<li><a href="#">お電話でのご注文</a></li>
+				<li><a href="#">マイアカウント登録・削除</a></li>
+				<li><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="info.html">会社概要</a></li>
+				<li><a href="policy.html">プライバシーポリシー</a></li>
+				<li><a href="#">スタッフ募集</a></li>
+				<li><a href="#">特定商取引法に基づく表記</a></li>
+				
+			</ul>
+		</nav>
+		<div id="other-info">
+			<p></p>
+		</div>
+	</div>
+</div>
+<div id="footer-area" class="c-dark">
+	<footer id="site-footer" class="container">
+		<p class="en-spc">Copyright &copy; 2018 F Co.,Ltd. All rights reserved.</p>
+	</footer>
+</div>
+	</div><!--stick-footer-->
+	</div><!--wrapper-->
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>f-bloom プロトタイプ01</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/style-color.css" rel="stylesheet" media="all">
+
+<link href="css/themes/image.css" rel="stylesheet" media="all"><!--scrollUp-->
+<link href="css/jquery.bxslider.min.css" rel="stylesheet" medida="all">
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+
+<script>
+	// 固定ヘッダでのページ内リンクずれを解消する
+	$(function () {
+		var headerHight = 180; //ヘッダの高さ
+		$('a[href^="#"]').click(function(){
+			var href= $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
+			$("html, body").animate({scrollTop:position}, 200, "swing");
+			return false;
+		});
+	});
+</script>
+<script>
+		$(document).ready(function(){
+			$('.slide').bxSlider({
+				auto:true,
+				mode:'fade'
+			});
+		});
+</script>
+<script>
+	function init() {
+		// スクロールして何ピクセルでアニメーションさせるか
+		var px_change   = 500;	// ヘッダを変化させるポイント
+		var bg_change	= 50;	// 背景色を変化させるポイント
+
+		// スクロールのイベントハンドラを登録
+		window.addEventListener('scroll', function(e){
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > bg_change ) {
+			$("#site-header-area").addClass("c-primary-t");
+			$("#gnav-area").addClass("c-primary-t");
+		
+		// 変化するポイント以前であればクラスを削除
+		} else if ($("#site-header-area").hasClass("c-primary-t")) {
+			$("#site-header-area").removeClass("c-primary-t");
+			$("#gnav-area").removeClass("c-primary-t");
+
+		}
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > px_change ) {
+			$("header").addClass("hide");
+			$("#header-top").addClass("hide");
+
+		// 変化するポイント以前であればクラスを削除
+		} else if ( $("header").hasClass("hide") ) {
+			$("header").removeClass("hide");
+			$("#header-top").removeClass("hide");
+			
+		}
+		});
+	}
+	window.onload = init();
+</script>
+<script>
+	$(function(){
+		$.scrollUp({scrollImg: true});
+	});
+</script>
+</head>
+
+<body>
+<div id="header-area-fixed">
+	<div id="header-top" class="c-dark">
+		<div id="header-top-content" class="container">
+			<ul id="myaccount">
+				<li><a href="#login">マイアカウント</a></li>
+				<li><a href="#login">ログイン</a></li>
+				<li>|</li>
+				<li><a href="#login">会員登録</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="site-header-area" class="c-primary">
+	<header id="site-header" class="container">
+		<div id="shop-logo">
+			<a href="index.html"><img class="logo" src="images/logo_v06.png" width="220" height="100" alt="logo"></a>
+		</div>
+		<div id="shop-heading">
+			<p class="txt-small">プリザーブドフラワー専門店</p>
+			<h1 class="shop-title">エフ・ブルーム</h1>
+		</div>
+	</header>
+	</div>
+	<div id="gnav-area" class="c-primary">
+		<nav id="gnav" class="container">
+			<ul id="gnav-menu">
+				<li><a href="index.html">ホーム</a></li>
+				<li class="sub-menu"><a href="product-list.html">カテゴリ</a>
+					<ul class="c-base">
+						<li><a href="product-list.html">すべての商品を見る</a></li>
+						<li><a href="product-list.html">ウエディング</a></li>
+						<li><a href="product-list.html">テーブルフラワー</a></li>
+						<li><a href="product-list.html">フレーム</a></li>
+						<li><a href="product-list.html">リース</a></li>
+					</ul>
+				</li>
+				<li class="sub-menu"><a href="about.html">はじめての方へ</a>
+					<ul class="c-base">
+						<li><a href="about.html">プリザーブドフラワーとは</a></li>
+					</ul>
+				</li>
+				<li><a href="location.html">店舗へのアクセス</a></li>
+			</ul>
+		</nav>
+	</div><!--gnav-area-->
+</div><!--header-area-fixed-->
+
+<div id="content" class="container">
+	<div id="slider" class="slide">
+		<div><img src="images/key-image-940x300-01.jpg" width="940" height="300" alt=""></div>
+		<div><img src="images/key-image-940x300-02.jpg" width="940" height="300" alt=""></div>
+		<div><img src="images/key-image-940x300-03.jpg" width="940" height="300" alt=""></div>
+	</div>
+
+	<section id="news">
+		<h2 class="hd-m-u">お知らせ</h2>
+		<dl id="headline">
+			<dt class="date">10/3(水)</dt>
+			<dd class="headline-text"><a class="txt-link" href="product-a023.html">アンティークローズ入荷しました。</a></dd>
+			<dt class="date">9/30(日)</dt>
+			<dd class="headline-text">台風24号接近のため、本日は18時に閉店いたします。</dd>
+			<dt class="date">9/28(金)</dt>
+			<dd class="headline-text">エフ・ブルーム 池袋店 新装オープンしました！</dd>
+		</dl>
+	</section>
+	<main>
+		<section class="parts-list-tiled">
+			<div class="heading"><h2 class="hd-large">新着商品</h2><p></p></div>
+			<ul>
+				<li class="tile">
+					<a href="product-a023.html"><img src="images/a023/a023-02-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a007-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-a003.html"><img src="images/a003-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-a006.html"><img src="images/a006/a006-05-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile-large">
+					<a href="product-a002.html"><img src="images/a002/a002-01-460x460.jpg" width="460" height="460" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a007/a007-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+			</ul>
+		</section><!--tile-list-->
+		<section class="parts-list-tiled">
+			<div class="heading"><h2 class="hd-large">おすすめ商品</h2></div>
+			<ul>
+				<li class="tile">
+					<a href="product-a006.html"><img src="images/a006/a006-06-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-a023.html"><img src="images/a023/a023-05-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a008-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a009-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile-large">
+					<a href="product-a003.html"><img src="images/a003/a003-01-460x460.jpg" width="460" height="460" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a010-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+			</ul>
+		</section><!--parts-list-->
+		<section class="parts-list-tiled">
+			<div class="heading"><h2 class="hd-large">Table Flowers</h2></div>
+			<ul>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a001-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a002-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a003-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a007-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile-large">
+					<a href="product-a006.html"><img src="images/a006/a006-01-460x460.jpg" width="460" height="460" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a017/a017-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+			</ul>
+		</section><!--parts-list-->
+		<section class="parts-list-tiled">
+			<div class="heading"><h2 class="hd-large">Wedding</h2></div>
+			<ul>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a005/a005-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a011-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a014-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a018/a018-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile-large">
+					<a href="product-a023.html"><img src="images/a023/a023-01-460x460.jpg" width="460" height="460" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a022/a022-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+			</ul>
+		</section><!--parts-list-->
+		<section class="parts-list-tiled">
+			<div class="heading"><h2 class="hd-large">Wreath</h2></div>
+			<ul>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a012-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-a002.html"><img src="images/a013-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-a003.html"><img src="images/a015-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a013/a013-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				<li class="tile-large">
+					<a href="product-a002.html"><img src="images/a002/a002-02-460x460.jpg" width="460" height="460" alt=""></a>
+				</li>
+				<li class="tile">
+					<a href="product-axxx.html"><img src="images/a012/a012-01-220x220.jpg" width="220" height="220" alt=""></a>
+				</li>
+				
+			</ul>
+		</section><!--parts-list-->
+	</main>
+	<div id="banner">
+		<ul>
+			<li><a href="product-list.html"><img src="images/banner-wedding-460x60.jpg" width="460" height="60" alt=""></a><div>
+				<p class="bnr-txt1-r">ウエディング特集</p>
+			</div></li>
+			<li><a href="product-list.html"><img src="images/banner-xmas-460x60.jpg" width="460" height="60" alt=""></a>
+				<div>
+					<p class="bnr-txt1-w">クリスマスフェア</p><p class="bnr-txt2-w">12/15～12/25まで</p>
+				</div></li>
+		</ul>
+	</div>
+	<section id="login">
+		<h2 class="hd-m-u">マイアカウント</h2>
+		<div id="sign-up-desc">
+			<p>会員登録すると便利なマイページをご利用いただけます。<br>会費は無料です。</p>
+			<p class="txt-small"><a href="policy.html" target="_blank">※プライバシーポリシー</a></p>	
+		</div>
+		
+		<div id="sign-up-box">
+		<div class="sign-up top">
+			<h3 class="hd-s">エフブルーム会員の方はこちら</h3>
+			<form id="login-form" action="#" method="post">
+				<dl class="form-parts">
+					<dt>ログイン名:</dt><dd><input type="text" name="userid"></dd>
+					<dt>パスワード:</dt><dd><input type="password" name="password">&nbsp;&nbsp;<span class="txt-small"><a href="#">※パスワードをお忘れの方</a></span></dd>
+				</dl>
+				<div class="buttons"><input type="submit" value="ログイン" class="btn-large c-accent"></div>
+			</form>
+		</div>
+		<div class="sign-up">
+			<h3 class="hd-s">新規ご登録の方はこちら</h3>
+			<form id="sing-up-form" action="#" method="post">
+				<dl class="form-parts">
+					<dt>メールアドレス:</dt><dd><input type="email" name="email"></dd>
+				</dl>
+				<div class="buttons"><input type="submit" value="会員登録をする" class="btn-large c-accent"></div>
+			</form>
+		</div>
+		</div>
+		
+	</section><!--login-->
+	</div><!--content-->
+
+<div id="sub-footer-area" class="c-primary">
+	<div id="sub-footer-content" class="container">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="contact-us.html">お問い合わせ</a></li>
+				<li><a href="#">お電話でのご注文</a></li>
+				<li><a href="#">マイアカウント登録・削除</a></li>
+				<li><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="info.html">会社概要</a></li>
+				<li><a href="policy.html">プライバシーポリシー</a></li>
+				<li><a href="#">スタッフ募集</a></li>
+				<li><a href="#">特定商取引法に基づく表記</a></li>
+				
+			</ul>
+		</nav>
+		<div id="other-info">
+			<p></p>
+		</div>
+	</div>
+</div>
+<div id="footer-area" class="c-dark">
+	<footer id="site-footer" class="container">
+		<p class="en-spc">Copyright &copy; 2018 F Co.,Ltd. All rights reserved.</p>
+	</footer>
+</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>f・bloom | 商品詳細</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/reset.css" rel="stylesheet" media="all">
+<link href="slick/slick.css" rel="stylesheet" media="all">
+<link href="slick/slick-theme.css" rel="stylesheet" media="all">
+<link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/style-color.css" rel="stylesheet" media="all">
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="slick/slick.min.js"></script>
+
+<script>
+	function init() {
+		// スクロールして何ピクセルでアニメーションさせるか
+		var px_change   = 100;	// ヘッダを変化させるポイント
+		var bg_change	= 50;	// 背景色を変化させるポイント
+
+		// スクロールのイベントハンドラを登録
+		window.addEventListener('scroll', function(e){
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > bg_change ) {
+			$("#site-header-area").addClass("c-primary-t");
+			$("#gnav-area").addClass("c-primary-t");
+		
+		// 変化するポイント以前であればクラスを削除
+		} else if ($("#site-header-area").hasClass("c-primary-t")) {
+			$("#site-header-area").removeClass("c-primary-t");
+			$("#gnav-area").removeClass("c-primary-t");
+
+		}
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > px_change ) {
+			$("header").addClass("hide");
+			$("#header-top").addClass("hide");
+
+		// 変化するポイント以前であればクラスを削除
+		} else if ( $("header").hasClass("hide") ) {
+			$("header").removeClass("hide");
+			$("#header-top").removeClass("hide");
+			
+		}
+		});
+	}
+	window.onload = init();
+</script>
+<script>
+	$(document).ready(function(){
+		// $('.slick').slick();
+		$('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'		// サムネイルのクラス名
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',	// スライダー本体のクラス名
+			dots: true,
+			centerMode: true,
+			focusOnSelect: true
+		});
+
+		$('.slider-nav-medium').slick({
+			slidesToShow: 3,
+			slidesToScroll: 3
+		});
+		});
+</script>
+
+</head>
+
+<body>
+<div id="header-area-fixed">
+	<div id="header-top" class="c-dark">
+		<div id="header-top-content" class="container">
+			<ul id="myaccount">
+				<li><a href="index.html#login">マイアカウント</a></li>
+				<li><a href="index.html#login">ログイン</a></li>
+				<li>|</li>
+				<li><a href="index.html#login">会員登録</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="site-header-area" class="c-primary">
+	<header id="site-header" class="container">
+		<div id="shop-logo">
+			<a href="index.html"><img class="logo" src="images/logo_v06.png" width="220" height="100" alt="logo"></a>
+		</div>
+		<div id="shop-heading">
+			<p class="txt-small">プリザーブドフラワー専門店</p>
+			<h1 class="shop-title">エフ・ブルーム</h1>
+		</div>
+	</header>
+	</div>
+	<div id="gnav-area" class="c-primary">
+		<nav id="gnav" class="container">
+			<ul id="gnav-menu">
+				<li><a href="index.html">ホーム</a></li>
+				<li class="sub-menu"><a href="product-list.html">カテゴリ</a>
+					<ul class="c-base">
+						<li><a href="product-list.html">すべての商品を見る</a></li>
+						<li><a href="product-list.html">ウエディング</a></li>
+						<li><a href="product-list.html">テーブルフラワー</a></li>
+						<li><a href="product-list.html">フレーム</a></li>
+						<li><a href="product-list.html">リース</a></li>
+					</ul>
+				</li>
+				<li class="sub-menu"><a href="about.html">はじめての方へ</a>
+					<ul class="c-base">
+						<li><a href="about.html">プリザーブドフラワーとは</a></li>
+					</ul>
+				</li>
+				<li><a href="location.html">店舗へのアクセス</a></li>
+			</ul>
+		</nav>
+	</div><!--gnav-area-->
+</div><!--header-area-fixed-->
+
+<div id="content" class="container">
+	<div class="breadcrumb">
+		<p><a href="index.html">ホーム</a> &gt; <a href="product-list.html">テーブルフラワー</a> &gt; アメジスト</p>
+	</div>
+	<div id="product-info">
+		<div id="product-view">
+			<div class="slider-for"><!--スライダー本体-->
+					<div><img src="images/a003/a003-01-460x460.jpg" width="460" height="460" alt=""></div>
+					<div><img src="images/a003/a003-02-460x460.jpg" width="460" height="460" alt=""></div>
+					<div><img src="images/a003/a003-03-460x460.jpg" width="460" height="460" alt=""></div>
+					<div><img src="images/a003/a003-04-460x460.jpg" width="460" height="460" alt=""></div>
+					<div><img src="images/a003/a003-05-460x460.jpg" width="460" height="460" alt=""></div>
+					<div><img src="images/a003/a003-06-460x460.jpg" width="460" height="460" alt=""></div>
+			</div><!--silder-for-->
+			<div class="slider-nav-box">
+				<ul class="slider-nav"><!--サムネイル-->
+					<li><img src="images/a003/a003-01-220x220.jpg" width="220" height="220" alt=""></li>
+					<li><img src="images/a003/a003-02-220x220.jpg" width="220" height="220" alt=""></li>
+					<li><img src="images/a003/a003-03-220x220.jpg" width="220" height="220" alt=""></li>
+					<li><img src="images/a003/a003-04-220x220.jpg" width="220" height="220" alt=""></li>
+					<li><img src="images/a003/a003-05-220x220.jpg" width="220" height="220" alt=""></li>
+					<li><img src="images/a003/a003-06-220x220.jpg" width="220" height="220" alt=""></li>
+				</ul>
+			</div><!--slider-nav-box-->
+		</div><!--product-view-->
+		<section id="product-spec">
+			<h2 class="hd-large">アメジスト</h2>
+			<p class="product-price">6,500円(税込 7,020円)</p>
+			<p class="txt-small">商品型番: A003</p>
+			<div class="description">
+				<p class="txt-small">これはダミーテキストです。エレガントますフラワー、グレープのタイプのお基調が、花のバラ方の陶器入りホワイトを華やかに贈り物出来るなた。グリーン調に流れる数種のグラデーション、陶器の色にしゴールド、フラワーなどホワイトのバラのお色をたっぷりが飾っれててです。シンプルたピンクのバラに花が基調に輝かな花なマム贈り物ます。</p>
+			</div>
+			<table id="spec-table" class="txt-small">
+				<tr><th>花材</th><td>プリザーブドフラワー(バラ、アジサイ、カーネーション)、アーティフィシャルフラワー（フィトニア）</td></tr>
+				<tr><th>資材</th><td>陶製花器、リボン</td></tr>
+				<tr><th>サイズ</th><td>高さ30cm / 幅20cm / 奥行き20cm</td></tr>
+				<tr><th>重さ</th><td>300g</td></tr>
+			</table>
+		</section><!--product-spec-->
+	</div>
+	<section id="related-products">
+		<h2 class="hd-m-u">関連商品</h2>
+		<div class="slider-nav-box">
+			<ul class="slider-nav-medium">
+				<li><a href="product-axxx.html"><img src="images/a001-220x220.jpg" width="220" height="220" alt=""></a></li>
+				<li><a href="product-a003.html"><img src="images/a003-220x220.jpg" width="220" height="220" alt=""></a></li>
+				<li><a href="product-axxx.html"><img src="images/a005-220x220.jpg" width="220" height="220" alt=""></a></li>
+				<li><a href="product-axxx.html"><img src="images/a007-220x220.jpg" width="220" height="220" alt=""></a></li>
+				<li><a href="product-axxx.html"><img src="images/a009-220x220.jpg" width="220" height="220" alt=""></a></li>
+			</ul>
+		</div>
+	</section><!--related-products-->
+</div><!--content-->
+	
+	<div class="fill-blank"></div>
+<div id="sub-footer-area" class="c-primary">
+	<div id="sub-footer-content" class="container">
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="contact-us.html">お問い合わせ</a></li>
+				<li><a href="#">お電話でのご注文</a></li>
+				<li><a href="#">マイアカウント登録・削除</a></li>
+				<li><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+		<nav class="footer-nav">
+			<ul>
+				<li><a href="info.html">会社概要</a></li>
+				<li><a href="policy.html">プライバシーポリシー</a></li>
+				<li><a href="#">スタッフ募集</a></li>
+				<li><a href="#">特定商取引法に基づく表記</a></li>
+				
+			</ul>
+		</nav>
+		<div id="other-info">
+			<p></p>
+		</div>
+	</div>
+</div>
+<div id="footer-area" class="c-dark">
+	<footer id="site-footer" class="container">
+		<p class="en-spc">Copyright &copy; 2018 F Co.,Ltd. All rights reserved.</p>
+	</footer>
+</div>
+	
+</body>
+</html>

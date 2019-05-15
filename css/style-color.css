@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+.c-base{
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+/* 配色見本:  
+ * https://saruwakakun.com/html-css/material/colors
+ * https://saruwakakun.com/design/gallery/palette
+*/
+/*
+Primary		#FF5722		rgb(255, 87, 34)	オレンジ
+Secondary	#E64A19		rgb(230, 74, 25)	濃いオレンジ
+Accent		#3F51B5		rgb(63, 81, 181)	濃い青(インディゴ)
+*/
+.c-primary{
+	background-color: #FF5722;
+	color: white;
+}
+
+.c-primary-t{	/* 透過 */
+	background-color: rgba(255, 87, 34, 0.6);	/* #FF5722 */
+	color: white;
+}
+
+.c-secondary{
+	background-color: #E64A19;
+	color: white;
+}
+
+.c-secondary-t{	/* 透過 */
+	background-color: rgba(230, 74, 25, 0.6);	/* #E64A19*/
+}
+
+.c-dark{
+	background-color: #E64A19;		/* same as secondary color */
+	color: white;
+}
+
+.c-dark-t{	/* 透過 */
+	background-color: rgba(230, 74, 25, 0.6);	/* #E64A19 */
+	color: white;
+}
+
+.c-accent{
+	background-color: #3F51B5;
+	color: white;
+}
+
+.c-accent-t{	/* 透過 */
+	background-color: rgba(63, 81, 181, 0.6);	/* #3F51B5 */
+	color: white;
+}
