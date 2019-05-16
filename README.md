@@ -31,7 +31,7 @@ HTML5, CSS3, jQuery, JavaScript
 
 ## 外部モジュール
 - jQuery 2.2.4
-- bxSlider 4.2.12
+- [bxSlider](https://bxslider.com/) 4.2.12
 - slick 1.8.0
 - scrollUp 2.4.1
 - list 1.5.0
