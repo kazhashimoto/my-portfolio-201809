@@ -1,6 +1,8 @@
 この作品は、私(Kazuhiro Hashimoto)が職業訓練校Webクリエイター養成科の生徒だった時に、カリキュラムの中で最初に制作した架空店舗(プリザーブドフラワーショップ)のWebサイトです。\
 &ast;この作品に記載の店舗名、商品、所在地等は実在のものとは関係ありません。
 
+DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto.github.io/my-portfolio-site01/)
+
 ## 主な実装項目
 - 固定ヘッダー(全ページ)。下スクロール時にヘッダーの高さが小さくなる。
 - グローバルナビゲーションは、マウスホバー時に下位のメニューをドロップダウンリストで表示。
