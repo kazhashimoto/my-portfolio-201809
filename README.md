@@ -6,7 +6,7 @@ DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto
 ![Top page](https://user-images.githubusercontent.com/50348276/57937873-d9f2b180-7901-11e9-8b69-78fe135d203d.png)
 
 ## 主な実装項目
-- 固定ヘッダー(全ページ)。下スクロール時にヘッダーの高さが小さくなる。
+- 固定ヘッダー(全ページ)。コンテンツ領域を広くとるため、下スクロール時にヘッダーの高さが小さくなるよう調整する。
 - グローバルナビゲーションは、マウスホバー時に下位のメニューをドロップダウンリストで表示。
 - メインビジュアルはスライダーで表示。
 - ページ内のジャンプはスムーススクロール。
@@ -28,7 +28,9 @@ DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto
 ## 実施工程
 1. サイト構成の設計
 2. デザインカンプの作成
-3. コーディング
+3. 技術検証
+4. コーディング
+5. テスト
 
 ## 使用したツール
 - Adobe Illustrator CC 2017
