@@ -3,6 +3,8 @@
 
 DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto.github.io/my-portfolio-site01/)
 
+![Top page](https://user-images.githubusercontent.com/50348276/57937873-d9f2b180-7901-11e9-8b69-78fe135d203d.png)
+
 ## 主な実装項目
 - 固定ヘッダー(全ページ)。下スクロール時にヘッダーの高さが小さくなる。
 - グローバルナビゲーションは、マウスホバー時に下位のメニューをドロップダウンリストで表示。
