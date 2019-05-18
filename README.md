@@ -17,9 +17,14 @@ DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto
 - [地図](https://kazhashimoto.github.io/my-portfolio-site01/location.html)はGoogle Mapsをiframeで埋め込み表示。
 
 ## 表示確認環境
-- Chrome (Windows)
-- Firefox (Windows)
+斜体はサイト制作時にテストしたOS/バージョン。
 
+PC:
+- Chrome (_Windows 7_, _Windows 10_, macOS 10.14)
+- Firefox (_Windows 7_, _Windows 10_, macOS 10.14)
+- Safari 12 (macOS 10.14)
+
+Mobile:\
 レスポンシブは非対応です。
 
 ## 制作期間
