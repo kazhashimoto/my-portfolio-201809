@@ -10,16 +10,16 @@ DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto
 - グローバルナビゲーションは、マウスホバー時に下位のメニューをドロップダウンリストで表示。
 - メインビジュアルはスライダーで表示。
 - ページ内のジャンプはスムーススクロール。
-- [商品一覧](https://kazhashimoto.github.io/my-portfolio-site01/product-list.html)のリスト表示は、絞り込みや並び替えが可能。ただし、クライアントサイドのみで実装。
-- [商品詳細](https://kazhashimoto.github.io/my-portfolio-site01/product-a002.html)ページは、商品画像をカルーセルスライダーで表示。
-- [商品詳細](https://kazhashimoto.github.io/my-portfolio-site01/product-a002.html)ページは、関連商品の画像をスライダーで表示。
+- [商品一覧](https://kazhashimoto.github.io/my-portfolio-site01/product-list.html)のリスト表示は絞り込みや並び替えが可能。ただし、クライアントサイドのみで実装。
+- [商品詳細](https://kazhashimoto.github.io/my-portfolio-site01/product-a002.html)ページは商品画像をカルーセルスライダーで表示。
+- [商品詳細](https://kazhashimoto.github.io/my-portfolio-site01/product-a002.html)ページは関連商品の画像をスライダーで表示。
 - [地図](https://kazhashimoto.github.io/my-portfolio-site01/location.html)はGoogle Mapsをiframeで埋め込み表示。
 
 ## 表示確認環境
 - Chrome (Windows)
 - Firefox (Windows)
 
-対象はPC版のみで、レスポンシブ対応はしていません。
+レスポンシブは非対応です。
 
 ## 制作期間
 2018年9月26日〜10月8日 (13日間）\
