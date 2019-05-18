@@ -51,3 +51,6 @@ HTML5, CSS3, jQuery, JavaScript
 - [slick](https://kenwheeler.github.io/slick/) 1.8.0
 - [scrollUp](https://markgoodyear.com/labs/scrollup/) 2.4.1
 - [list.js](https://listjs.com/) 1.5.0
+
+
+もう１つの作品は[こちら](https://github.com/kazhashimoto/my-portfolio-site02)。
