@@ -6,6 +6,7 @@ DEMO: [https://kazhashimoto.github.io/my-portfolio-site01/](https://kazhashimoto
 ![Top page](https://user-images.githubusercontent.com/50348276/57937873-d9f2b180-7901-11e9-8b69-78fe135d203d.png)
 
 ## 主な実装項目
+- ページレイアウトは[960 Grid System](https://960.gs/)で配置。
 - 固定ヘッダー(全ページ)。コンテンツ領域を広くとるため、下スクロール時にヘッダーの高さが小さくなるよう調整する。
 - グローバルナビゲーションは、マウスホバー時に下位のメニューをドロップダウンリストで表示。
 - メインビジュアルはスライダーで表示。
